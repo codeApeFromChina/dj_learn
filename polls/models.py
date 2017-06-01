@@ -8,7 +8,7 @@ class Question(models.Model):
     question_text = models.CharField(max_length=1000)
     pub_date = models.DateTimeField('date published')
 
-    def __unicode__(self):
+    def __str__(self):
         return u'%s' % self.question_text
 
 
@@ -17,6 +17,6 @@ class Choice(models.Model):
     choice_text = models.CharField(max_length=1000)
     votes = models.IntegerField(default=0)
 
-    def __unicode__(self):
+    def __str__(self):
         return u'%s' % self.choice_text
 
